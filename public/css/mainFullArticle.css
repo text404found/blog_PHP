@@ -1,0 +1,145 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,body
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: #181024;
+}
+
+body .articles
+{
+    width: 90%;
+    height: 90%;
+}
+
+body .accountDetail 
+{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 10px;
+}
+
+body .accountDetail .fotoIcon
+{
+    width: 100px;
+    height: 100px;
+    padding: 10px 10px;
+    border-radius: 100%;
+    background-color: orange;
+}
+
+body .accountDetail .name
+{
+    margin-top: 15px;
+    text-transform: uppercase;
+    color: white;
+}
+
+body .articles 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    overflow: auto;
+    max-height: 90%;
+}
+
+.article_comments
+{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+body .articles .createArticle
+{
+    width: 60%;
+    color: white;
+    margin-bottom: 90px;
+}
+
+
+body .articles .allArticles 
+{
+    padding: 20px 20px;
+    width: 100%;
+    height: 50%;
+    overflow: scroll;
+}
+
+body .articles .allArticles .article
+{
+    padding: 10px 10px;
+    background-color: #994a5a;
+    border-radius: 10px;
+    max-height: 100px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.article:first-child
+{
+    margin-top: 0;
+}
+
+body .articles .allArticles .article .title_preview
+{
+    width: 50%;
+}
+
+
+body .articles .allArticles .article .infos
+{
+    display: flex;
+    gap: 20px;
+}
+
+.title_preview h2
+{
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+#editor
+{
+    display: none;
+}
+
+.ql-toolbar
+{
+    display: none;  
+}
+
+.comments
+{   
+    width: 70%;
+    max-height: 30%;
+    padding: 20px;
+    overflow: auto;
+}
+
+.comments .comment
+{
+    padding: 20px;
+    margin-top: 10px;
+    background-color: red;
+    border-radius: 10px;
+}

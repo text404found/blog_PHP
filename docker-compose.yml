@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80" # Mapeia a porta do container para a porta local
+    volumes:
+      - ./src:/var/www/html # Monta o código local dentro do container
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8.0
+    container_name: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: blog
+      MYSQL_USER: blog_user
+      MYSQL_PASSWORD: blog_password
+    volumes:
+      - db_data:/var/lib/mysql
+    ports:
+      - "3306:3306" # Porta do MySQL para acesso externo
+
+volumes:
+  db_data:
